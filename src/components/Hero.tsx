@@ -30,7 +30,7 @@ export function Hero() {
   }, [index, wordsList]);
 
   return (
-    <section className="relative min-h-screen pt-32 pb-20 overflow-hidden flex flex-col justify-center">
+    <section className="relative min-h-screen pt-16 pb-20 overflow-hidden flex flex-col justify-center">
       {/* Abstract background elements */}
       <div className="absolute top-20 right-[10%] w-72 h-72 rounded-full bg-primary/10 filter blur-3xl opacity-70 animate-pulse-subtle"></div>
       <div className="absolute bottom-20 left-[10%] w-96 h-96 rounded-full bg-accent/20 filter blur-3xl opacity-70 animate-float"></div>

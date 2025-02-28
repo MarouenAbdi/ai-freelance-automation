@@ -1,6 +1,5 @@
 
 import React, { useEffect } from 'react';
-import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
 import Services from '@/components/Services';
 import Process from '@/components/Process';
@@ -39,7 +38,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <Navbar />
       <main>
         <Hero />
         <Services />
@@ -49,7 +47,6 @@ const Index = () => {
       </main>
       <Footer />
       
-      {/* Add custom styles for clip paths */}
       <style>
         {`
         .clip-path-contact {
