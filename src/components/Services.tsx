@@ -6,7 +6,8 @@ import {
   Bot, 
   Settings, 
   Book, 
-  Code
+  Code,
+  ArrowRight
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 

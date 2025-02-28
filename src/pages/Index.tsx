@@ -50,7 +50,8 @@ const Index = () => {
       <Footer />
       
       {/* Add custom styles for clip paths */}
-      <style jsx global>{`
+      <style>
+        {`
         .clip-path-contact {
           clip-path: polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
         }
@@ -60,7 +61,8 @@ const Index = () => {
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
           }
         }
-      `}</style>
+        `}
+      </style>
     </div>
   );
 };
