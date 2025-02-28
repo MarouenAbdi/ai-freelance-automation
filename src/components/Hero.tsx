@@ -40,7 +40,7 @@ export function Hero() {
           <div className={`space-y-4 transition-all duration-1000 ${isVisible ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-10'}`}>
             <div className="inline-block px-3 py-1 mb-6 rounded-full bg-accent/60 backdrop-blur-sm border border-accent-foreground/10">
               <span className="text-xs font-medium text-primary">
-                AI-Powered Solutions for Modern Businesses
+                Independent AI Development Specialist
               </span>
             </div>
             
@@ -52,7 +52,7 @@ export function Hero() {
             </h1>
             
             <p className="mt-6 text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              We build custom AI agents and automation solutions that streamline your operations,
+              I build custom AI agents and automation solutions that streamline your operations,
               enhance customer experiences, and drive business growth.
             </p>
             
@@ -66,7 +66,7 @@ export function Hero() {
               <Button variant="outline" size="lg" asChild>
                 <a href="#services">
                   <MessageSquare className="mr-2 h-4 w-4" />
-                  Explore Services
+                  View Services
                 </a>
               </Button>
             </div>

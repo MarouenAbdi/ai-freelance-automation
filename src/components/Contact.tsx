@@ -63,7 +63,7 @@ export function Contact() {
     
     toast({
       title: "Demo request submitted",
-      description: "We'll be in touch with you shortly to schedule your demo.",
+      description: "I'll be in touch with you shortly to schedule your demo.",
     });
     
     form.reset();
@@ -86,7 +86,7 @@ export function Contact() {
               Ready to Transform Your Business with AI?
             </h2>
             <p className="text-muted-foreground mb-8">
-              Schedule a personalized demo to see how our AI automation solutions
+              Schedule a personalized demo to see how my AI automation solutions
               can address your specific business challenges and unlock new opportunities.
             </p>
             
@@ -98,8 +98,8 @@ export function Contact() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold mb-1">Email Us</h3>
-                  <p className="text-muted-foreground">hello@ainexus.com</p>
+                  <h3 className="text-sm font-semibold mb-1">Email Me</h3>
+                  <p className="text-muted-foreground">hello@aifreelancer.com</p>
                 </div>
               </div>
               
@@ -110,7 +110,7 @@ export function Contact() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold mb-1">Call Us</h3>
+                  <h3 className="text-sm font-semibold mb-1">Call Me</h3>
                   <p className="text-muted-foreground">+1 (555) 123-4567</p>
                 </div>
               </div>
@@ -122,7 +122,7 @@ export function Contact() {
                   </div>
                 </div>
                 <div>
-                  <h3 className="text-sm font-semibold mb-1">Office Hours</h3>
+                  <h3 className="text-sm font-semibold mb-1">Availability</h3>
                   <p className="text-muted-foreground">Monday - Friday: 9AM - 6PM EST</p>
                 </div>
               </div>
@@ -136,7 +136,7 @@ export function Contact() {
                 Book a Demo
               </h3>
               <p className="text-sm text-muted-foreground mt-2">
-                Fill out the form below and our team will get back to you within 24 hours.
+                Fill out the form below and I'll get back to you within 24 hours.
               </p>
             </div>
             
@@ -147,7 +147,7 @@ export function Contact() {
                 </div>
                 <h3 className="text-xl font-semibold mb-2">Thank You!</h3>
                 <p className="text-muted-foreground">
-                  Your demo request has been successfully submitted. We'll be in touch shortly.
+                  Your demo request has been successfully submitted. I'll be in touch shortly.
                 </p>
               </div>
             ) : (
@@ -233,7 +233,7 @@ export function Contact() {
                         <FormLabel>Message</FormLabel>
                         <FormControl>
                           <Textarea 
-                            placeholder="Tell us about your project or requirements..." 
+                            placeholder="Tell me about your project or requirements..." 
                             className="min-h-[120px]"
                             {...field} 
                           />

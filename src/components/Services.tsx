@@ -22,7 +22,7 @@ const services: Service[] = [
   {
     icon: MessageSquare,
     title: "AI Chat Agents",
-    description: "Intelligent conversational agents that understand context and provide personalized responses.",
+    description: "I build intelligent conversational agents that understand context and provide personalized responses.",
     features: ["Natural language processing", "Context awareness", "24/7 availability", "Seamless integration"]
   },
   {
@@ -34,25 +34,25 @@ const services: Service[] = [
   {
     icon: Bot,
     title: "Custom AI Agents",
-    description: "Tailor-made AI solutions designed specifically for your business needs and workflows.",
+    description: "I create tailor-made AI solutions designed specifically for your business needs and workflows.",
     features: ["Domain-specific training", "Custom knowledge base", "Specialized capabilities", "Branded experience"]
   },
   {
     icon: Settings,
     title: "Workflow Automation",
-    description: "Streamline repetitive tasks and processes with intelligent automation solutions.",
+    description: "I streamline your repetitive tasks and processes with intelligent automation solutions.",
     features: ["Process optimization", "Error reduction", "Increased efficiency", "Time savings"]
   },
   {
     icon: Book,
     title: "AI Consultancy",
-    description: "Expert guidance on implementing AI solutions for your business challenges.",
+    description: "I provide expert guidance on implementing AI solutions for your business challenges.",
     features: ["AI strategy development", "Technology assessment", "Implementation roadmaps", "ROI analysis"]
   },
   {
     icon: Code,
     title: "Integration Services",
-    description: "Seamlessly connect AI solutions with your existing systems and platforms.",
+    description: "I seamlessly connect AI solutions with your existing systems and platforms.",
     features: ["API development", "Third-party integrations", "Data pipeline setup", "Unified experience"]
   }
 ];
@@ -92,13 +92,13 @@ export function Services() {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block px-3 py-1 mb-6 rounded-full bg-accent/60 backdrop-blur-sm border border-accent-foreground/10">
-            <span className="text-xs font-medium text-primary">Our Expertise</span>
+            <span className="text-xs font-medium text-primary">My Expertise</span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            Comprehensive AI Solutions for Your Business
+            Specialized AI Solutions for Your Business
           </h2>
           <p className="text-muted-foreground">
-            We offer a range of specialized AI services to help businesses automate processes, 
+            I offer a range of specialized AI services to help businesses automate processes, 
             enhance customer interactions, and gain competitive advantages.
           </p>
         </div>
