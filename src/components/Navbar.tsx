@@ -34,22 +34,12 @@ export function Navbar() {
           <span className="ml-1">Nexus</span>
         </a>
         
-        <nav className="hidden md:flex items-center space-x-8">
-          <a href="#services" className="underline-link text-sm font-medium">Services</a>
-          <a href="#process" className="underline-link text-sm font-medium">Process</a>
-          <a href="#blog" className="underline-link text-sm font-medium">Blog</a>
-          <a href="#contact" className="underline-link text-sm font-medium">Contact</a>
-        </nav>
-        
-        <div className="hidden md:flex items-center space-x-4">
-          <Button asChild variant="ghost" size="sm">
+        <div className="hidden md:flex items-center">
+          <Button asChild variant="default" size="sm">
             <a href="#contact">
               <MessageSquare className="h-4 w-4 mr-2" />
               Book a Demo
             </a>
-          </Button>
-          <Button asChild size="sm">
-            <a href="#contact">Get Started</a>
           </Button>
         </div>
         
@@ -63,15 +53,11 @@ export function Navbar() {
         {/* Mobile menu */}
         {mobileMenuOpen && (
           <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-lg shadow-lg border-b border-border animate-fade-in p-4 md:hidden">
-            <nav className="flex flex-col space-y-4">
-              <a href="#services" className="text-sm font-medium py-2" onClick={() => setMobileMenuOpen(false)}>Services</a>
-              <a href="#process" className="text-sm font-medium py-2" onClick={() => setMobileMenuOpen(false)}>Process</a>
-              <a href="#blog" className="text-sm font-medium py-2" onClick={() => setMobileMenuOpen(false)}>Blog</a>
-              <a href="#contact" className="text-sm font-medium py-2" onClick={() => setMobileMenuOpen(false)}>Contact</a>
-              <Button asChild size="sm" className="mt-2">
+            <div className="flex justify-center py-2">
+              <Button asChild size="sm">
                 <a href="#contact" onClick={() => setMobileMenuOpen(false)}>Book a Demo</a>
               </Button>
-            </nav>
+            </div>
           </div>
         )}
       </div>
