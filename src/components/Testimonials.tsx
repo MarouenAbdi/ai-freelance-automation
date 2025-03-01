@@ -1,8 +1,9 @@
-
-import React, { useState } from 'react';
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import React from 'react';
+import { Card, CardContent } from '@/components/ui/card';
+import { Quote } from 'lucide-react';
+import { TextReveal } from '@/components/ui/text-reveal';
+import { Spotlight } from '@/components/ui/spotlight';
+import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
 
 interface Testimonial {
   id: number;
@@ -15,116 +16,115 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    content: "Working with this AI specialist transformed our business operations. The custom solutions implemented were exactly what we needed to streamline our workflow.",
-    author: "Sarah Johnson",
-    role: "Operations Director",
-    company: "TechForward Inc."
+    content:
+      'Working with this AI specialist transformed our business operations. The custom solutions implemented were exactly what we needed to streamline our workflow.',
+    author: 'Sarah Johnson',
+    role: 'Operations Director',
+    company: 'TechForward Inc.',
   },
   {
     id: 2,
-    content: "The AI automation tools developed for our team saved us countless hours of manual work. Incredibly responsive and professional throughout the entire project.",
-    author: "Michael Chen",
-    role: "CTO",
-    company: "InnovateNow"
+    content:
+      'The AI automation tools developed for our team saved us countless hours of manual work. Incredibly responsive and professional throughout the entire project.',
+    author: 'Michael Chen',
+    role: 'CTO',
+    company: 'InnovateNow',
   },
   {
     id: 3,
-    content: "I was amazed by how quickly my business needs were understood and translated into practical AI solutions. The results exceeded my expectations in every way.",
-    author: "Priya Patel",
-    role: "Founder",
-    company: "Nexus Creative"
-  }
+    content:
+      'I was amazed by how quickly my business needs were understood and translated into practical AI solutions. The results exceeded my expectations in every way.',
+    author: 'Priya Patel',
+    role: 'Founder',
+    company: 'Nexus Creative',
+  },
+  {
+    id: 4,
+    content:
+      'The AI chatbot built for our customer service team has reduced response times by 80% and improved customer satisfaction scores dramatically.',
+    author: 'David Rodriguez',
+    role: 'Customer Experience Manager',
+    company: 'GlobalRetail',
+  },
+  {
+    id: 5,
+    content:
+      'Our sales team productivity increased by 35% after implementing the AI automation solutions. The ROI was evident within the first month.',
+    author: 'Jennifer Lee',
+    role: 'Sales Director',
+    company: 'GrowthTech Solutions',
+  },
+  {
+    id: 6,
+    content:
+      'The voice assistant integration was seamless and has completely transformed how our clients interact with our services. Truly revolutionary work.',
+    author: 'Robert Williams',
+    role: 'Product Manager',
+    company: 'VoiceTech Innovations',
+  },
 ];
 
 const Testimonials = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  const testimonialItems = testimonials.map((testimonial) => ({
+    id: testimonial.id,
+    content: (
+      <Card className="border border-primary/10 bg-background/50 backdrop-blur-sm relative overflow-hidden h-full">
+        <CardContent className="pt-6 pb-6 px-5 md:px-6 h-full flex flex-col">
+          <div className="absolute top-4 left-4 text-primary/60">
+            <Quote size={24} />
+          </div>
 
-  const nextTestimonial = () => {
-    setActiveIndex((prev) => (prev === testimonials.length - 1 ? 0 : prev + 1));
-  };
+          <blockquote className="text-sm md:text-base relative z-10 px-6 flex-grow">
+            {testimonial.content}
+          </blockquote>
 
-  const prevTestimonial = () => {
-    setActiveIndex((prev) => (prev === 0 ? testimonials.length - 1 : prev - 1));
-  };
+          <div className="mt-4 text-center">
+            <p className="font-semibold text-primary text-sm">
+              {testimonial.author}
+            </p>
+            <p className="text-xs text-muted-foreground">
+              {testimonial.role}, {testimonial.company}
+            </p>
+          </div>
+        </CardContent>
+      </Card>
+    ),
+  }));
 
   return (
     <section id="testimonials" className="py-20 relative overflow-hidden">
       <div className="absolute top-10 left-[5%] w-72 h-72 rounded-full bg-primary/5 filter blur-3xl"></div>
       <div className="absolute bottom-10 right-[5%] w-80 h-80 rounded-full bg-accent/10 filter blur-3xl"></div>
-      
+
       <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 gradient-text">
-            Client Testimonials
-          </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Don't just take my word for it. Here's what clients have to say about working together.
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="inline-block px-3 py-1 mb-6 rounded-full bg-accent/60 backdrop-blur-sm border border-accent-foreground/10">
+            <span className="text-xs font-medium text-primary">
+              Testimonials
+            </span>
+          </div>
+          <TextReveal
+            text="What Our Clients Say"
+            as="h2"
+            className="text-3xl md:text-4xl font-bold mb-6"
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+            }}
+          />
+          <p className="text-muted-foreground">
+            Don't just take my word for it. Here's what clients have to say
+            about working together.
           </p>
         </div>
 
-        <div className="relative max-w-4xl mx-auto">
-          <Card className="border border-primary/10 bg-background/50 backdrop-blur-sm relative overflow-hidden">
-            <CardContent className="pt-8 pb-8 px-6 md:px-10">
-              <div className="absolute top-6 left-6 text-primary/60">
-                <Quote size={40} />
-              </div>
-
-              <div className="min-h-[180px] md:min-h-[160px] flex items-center justify-center">
-                <div className="relative transition-all duration-300 animate-fade-in">
-                  <blockquote className="text-lg md:text-xl italic text-center relative z-10 px-8 md:px-12">
-                    {testimonials[activeIndex].content}
-                  </blockquote>
-
-                  <div className="mt-6 text-center">
-                    <p className="font-semibold text-primary">
-                      {testimonials[activeIndex].author}
-                    </p>
-                    <p className="text-sm text-muted-foreground">
-                      {testimonials[activeIndex].role}, {testimonials[activeIndex].company}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <div className="flex justify-center mt-8 gap-3">
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={prevTestimonial}
-              className="rounded-full border-primary/20 hover:bg-primary/10 hover:text-primary"
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeft className="h-5 w-5" />
-            </Button>
-            
-            <div className="flex gap-2 items-center mx-2">
-              {testimonials.map((_, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setActiveIndex(idx)}
-                  className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                    activeIndex === idx
-                      ? "bg-primary scale-110"
-                      : "bg-primary/30 hover:bg-primary/50"
-                  }`}
-                  aria-label={`Go to testimonial ${idx + 1}`}
-                />
-              ))}
-            </div>
-            
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={nextTestimonial}
-              className="rounded-full border-primary/20 hover:bg-primary/10 hover:text-primary"
-              aria-label="Next testimonial"
-            >
-              <ChevronRight className="h-5 w-5" />
-            </Button>
-          </div>
-        </div>
+        <Spotlight className="relative max-w-7xl mx-auto">
+          <InfiniteMovingCards
+            items={testimonialItems}
+            direction="left"
+            speed="slow"
+          />
+        </Spotlight>
       </div>
     </section>
   );

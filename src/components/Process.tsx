@@ -1,12 +1,11 @@
-
 import React, { useEffect, useRef } from 'react';
-import { 
-  Search, 
-  Lightbulb, 
-  Code as CodeIcon, 
+import {
+  Search,
+  Lightbulb,
+  Code as CodeIcon,
   Rocket,
-  ArrowRight
-} from "lucide-react";
+  ArrowRight,
+} from 'lucide-react';
 
 type Step = {
   number: number;
@@ -19,27 +18,31 @@ const steps: Step[] = [
   {
     number: 1,
     icon: Search,
-    title: "Discovery",
-    description: "We begin by understanding your business needs, challenges, and objectives through in-depth consultations."
+    title: 'Discovery & Kickoff',
+    description:
+      'We start with a deep dive into your goals, challenges, and unique needs. Through a collaborative consultation, I uncover opportunities where AI can drive the most value for your business.',
   },
   {
     number: 2,
     icon: Lightbulb,
-    title: "Strategy",
-    description: "Our team develops a tailored AI strategy that outlines the approach, technologies, and implementation plan."
+    title: 'Solution design',
+    description:
+      'Next, I craft a custom AI solution, blending cutting-edge technologies with an agile, iterative approach. This ensures your automation is powerful, practical, and perfectly aligned with your objectives.',
   },
   {
     number: 3,
     icon: CodeIcon,
-    title: "Development",
-    description: "We build custom AI solutions using advanced technologies and iterative development methodologies."
+    title: 'Build & Deployment',
+    description:
+      'I develop and rigorously test your solution, then deploy it seamlessly into your workflow. You’ll receive clear handoff guidance and training to hit the ground running with confidence.',
   },
   {
     number: 4,
     icon: Rocket,
-    title: "Deployment",
-    description: "After thorough testing, we deploy your solution, provide training, and ensure seamless integration."
-  }
+    title: 'Ongoing Support',
+    description:
+      'Need long-term optimization? I offer maintenance and support to keep your AI solution running smoothly, adapting to your evolving needs over time.',
+  },
 ];
 
 export function Process() {
@@ -71,24 +74,31 @@ export function Process() {
   }, []);
 
   return (
-    <section id="process" ref={sectionRef} className="py-24 relative overflow-hidden">
+    <section
+      id="process"
+      ref={sectionRef}
+      className="py-24 relative overflow-hidden"
+    >
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <div className="inline-block px-3 py-1 mb-6 rounded-full bg-accent/60 backdrop-blur-sm border border-accent-foreground/10">
-            <span className="text-xs font-medium text-primary">Our Approach</span>
+            <span className="text-xs font-medium text-primary">
+              My Approach
+            </span>
           </div>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            A Streamlined Process for Delivering Excellence
+            A Seamless Process for AI-Powered Success
           </h2>
           <p className="text-muted-foreground">
-            We follow a proven methodology to ensure the success of every AI automation project,
-            from initial discovery to final deployment and beyond.
+            I use a refined, step-by-step methodology to deliver exceptional AI
+            automation solutions tailored to your business—taking you from
+            vision to reality with precision and care.
           </p>
         </div>
-        
+
         <div className="max-w-4xl mx-auto">
           {steps.map((step, index) => (
-            <div 
+            <div
               key={step.title}
               ref={(el) => el && (animatedItemsRef.current[index] = el)}
               className="flex flex-col md:flex-row items-start gap-6 mb-12 pb-12 border-b border-border/50 last:border-0 animate-on-scroll"
@@ -105,7 +115,7 @@ export function Process() {
               <div>
                 <h3 className="text-2xl font-semibold mb-3">{step.title}</h3>
                 <p className="text-muted-foreground mb-4">{step.description}</p>
-                
+
                 {index < steps.length - 1 && (
                   <div className="hidden md:block mt-6 ml-2">
                     <ArrowRight className="w-5 h-5 text-primary rotate-90 md:rotate-0" />
